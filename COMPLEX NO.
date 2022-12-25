@@ -1,0 +1,42 @@
+class Complex
+{
+  float real,img;
+ 
+  Complex() {};  
+
+  Complex(float r, float i) 
+  {
+    real=r;
+    img=i;
+  }
+
+//C1 comes in this & C2 comes in a and the result is stored in temp
+ void add(Complex a)
+  { 
+    Complex temp=new Complex();
+    temp.real=this.real + a.real;
+    temp.img=this.img + a.img;
+    System.out.println("Summation : " + temp.real + " + " + temp.img + "i"); 
+  }
+ 
+//C1 comes in this & C2 comes in a and the result is stored in temp
+ void sub(Complex a)
+  { 
+    Complex temp=new Complex();
+    temp.real=this.real - a.real;
+    temp.img=this.img - a.img;
+    System.out.println("Subtraction : " + temp.real + " + " + temp.img + "i"); 
+  }
+}
+
+class Demo1
+{
+  public static void main(String args[])
+  {
+    Complex c1=new Complex(15.6f,6.12f);
+    Complex c2=new Complex(12.6f,4.03f);
+
+    c1.add(c2);
+    c1.sub(c2);
+  }
+}
